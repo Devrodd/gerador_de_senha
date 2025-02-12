@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de Senha, Senha Segura, Criar Senha">
+    <meta name="description" content="Gerador de Senhas Seguras - Crie senhas fortes e seguras com apenas um clique.">
+    <title>Gerador de Senhas Seguras</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img class="logo" src="./assets/logo.png" alt="Logo do Gerador de Senha"/>
+    
+    <main class="container-input">
+        <label for="slider">
+            <span>Tamanho: <strong id="valor">15</strong> caracteres</span>
+        </label>
+        <input id="slider" class="slider" type="range" min="6" max="25" value="15">
+        
+        <button id="button" class="button-cta" type="button" onclick="generatePassword()">Gerar Senha</button>
+    </main>
+    
+    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+        <span class="title">Sua senha gerada:</span>
+        <span id="password" class="password" aria-live="polite"></span>
+        <span class="tooltip">Clique na senha para copiar. ☝️</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
